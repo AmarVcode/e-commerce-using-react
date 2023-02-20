@@ -5,6 +5,10 @@ import {Router, Route,Routes} from 'react-router-dom';
 import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 import Category from './Pages/Category';
+import Footer from './Components/Footer';
+import Cart from './Pages/Cart';
+import Checkout from './Pages/Checkout';
+import About from './Pages/About';
 
 
 function App() {
@@ -15,8 +19,12 @@ function App() {
     <Routes>
   <Route path="/" element={<Home/>} />
   <Route path="/category" element={<Category/>} />
+  <Route path="/cart" element={<Cart/>} />
+  <Route path="/check" element={<Checkout/>} />
+  <Route path="/about" element={<About/>} />
+
     </Routes>
-    
+    <Footer/>
   
     </>
   )

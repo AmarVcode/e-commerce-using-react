@@ -1,0 +1,145 @@
+main{
+    background-color: black;
+}
+
+h1{
+    text-align: center;
+    color: lime;
+    text-shadow: 0px 0px 10px lime;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 50%;
+    margin: auto;
+    padding: 1em;
+    flex-wrap: wrap;
+    a{
+        position: relative;
+        padding: 1em;
+        color: white;
+        text-decoration: none;
+        transition: 500ms;
+        svg{
+            fill: white;
+            width: 3rem;
+            margin: .4em;
+            transition: 500ms;
+        }
+        div{
+            font-size: 1rem;
+        }
+
+    }
+}
+
+#linkedin:hover{
+    svg{
+
+        fill: #0077b5 !important;
+    }
+}
+
+#insta:hover{
+    background: linear-gradient(140deg , #feda75, #fa7e1e,#d62976,#962fbf,#4f5bd5);
+    transition: 0;
+    svg{
+        transition: 0;
+    }
+}
+
+
+#repl:hover{
+    svg{
+        fill: #f00 !important;
+    }
+}
+
+
+#hack:hover{
+    svg{
+
+        fill: lime !important;
+    }
+}
+
+#what:hover{
+    svg{
+
+        fill: lime !important;
+    }
+}
+
+#git:hover{
+    background: white;
+    svg{
+
+        fill: #171515 !important;
+    }
+}
+
+#mail:hover{
+    svg{
+
+        fill: #BB001B !important;
+    }
+}
+
+#linkedin, #mail{
+    animation:2s fromleft ;
+}
+
+#git, #what{
+    animation: 2s fromright;
+}
+
+#insta{
+    animation: 2s frombottom;
+}
+
+#hack{
+    animation: 2s frombottom;
+}
+
+#repl{
+animation: 2s fromtop;
+}
+
+@keyframes fromleft {
+    0%{
+        left: -1000px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes fromright {
+    0%{
+        left: 1000px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes frombottom {
+    0%{
+        top: 1000px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+@keyframes fromtop {
+    0%{
+        top: -1000px;
+    }
+    100%{
+        top: 0px;
+    }
+}
