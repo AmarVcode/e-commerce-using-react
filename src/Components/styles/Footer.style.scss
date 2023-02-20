@@ -1,15 +1,17 @@
 main{
     background-color: black;
+    padding: 3em;
 }
 
-h1{
+
+
+.flex{
+    h1{
     text-align: center;
     color: lime;
     text-shadow: 0px 0px 10px lime;
     width: 100%;
 }
-
-.flex{
     display: flex;
     justify-content: space-around;
     align-items: center;
