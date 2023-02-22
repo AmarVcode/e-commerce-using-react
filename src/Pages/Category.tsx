@@ -11,29 +11,34 @@ const Category = () => {
   let newdata:any=[];
 
 
-const addcart=(d:any)=>{
-
-let local:any=localStorage.getItem("cart")||"[]";
-local=JSON.parse(local);
-
-if(local.length===0){
-  local.push(d)
-}
-else{
-  for(let i=0;i<local.length;i++)
-{
-  if(local[i].id === d.id){
-   break;
-  }
+const addcart=(local:any)=>{
+  let bool:any=true
+  let localdata:any=localStorage.getItem("cart")||"[]";
+  localdata=JSON.parse(localdata);
+  
+      // console.log(localdata[i].id)
+      if(localdata.length===0){
+  bool=true
+      }
   else{
-   local.push(d)
+      localdata.map((elem:any)=>{
+          if(elem.id===local.id){
+              bool=false
+          }
+      })
   }
   
-
-
-}}
-local=JSON.stringify(local);
-localStorage.setItem("cart",local);
+  
+  if(bool===true){
+    localdata.push(local);  
+  }
+  else{
+      alert("Item Already Exist")
+  }
+  
+  localdata=JSON.stringify(localdata);
+  localStorage.setItem("cart",localdata)
+  
 }
 
 
