@@ -231,3 +231,39 @@ font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
 }
+
+.checked{
+    max-width: fit-content;
+    box-shadow: 0px 0px 10px grey;
+    margin:1em auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    font-size: 1rem;
+    div{
+        padding: .4em;
+    }
+   textarea{
+        max-width: 100%;
+        padding: .5em;
+    }
+    .btn-apply{
+        padding: .8em;
+        border: none;
+        background-color: yellow !important;
+    }
+    .btn-buy{
+        background: green;
+        width: 100%;
+        border: none;
+        padding: .5em;
+        font-size: 1rem;
+        color: white;
+
+    }
+
+    .mini-flex{
+        display: flex;
+    }
+}

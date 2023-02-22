@@ -23,16 +23,18 @@ let total=0
     Number Of Items {data.length}
   </div>
   <div>
-      Total Cost {total}
+      Total Cost is {total} {data[0].currency}
   </div>
-<div>
-  <input type="text" placeholder='Enter Coupen Code' />
+<div className='mini-flex'>
+  <input type="text" placeholder='Enter Coupen Code' /><button className='btn-apply'>
+    Apply
+  </button>
 </div>
 <div>
   <textarea placeholder='Enter Your Address'></textarea>
 </div>
 <div>
-  <button>
+  <button className='btn-buy'>
     Buy
   </button>
 </div>
