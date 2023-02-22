@@ -72,20 +72,65 @@ const mapeddata=()=>{
 }
 
   
+
+
+const [isChecked, setIsChecked] = useState(false);
+
+const handleCheckboxChange = (event:any) => {
+  setIsChecked(event.target.checked);
+};
+
+const [isChecked2, setIsChecked2] = useState(false);
+
+const handleCheckboxChange2 = (event:any) => {
+  setIsChecked2(event.target.checked);
+};
+
+
+
+
+
+
 for(let i=0;i<data.length;i++){
-if(data[i].categoryId === catdata){
-newdata.push(data[i])
+
+if(isChecked===true && isChecked2===true ){
+if(data[i].inStock===true && data[i].delivery===false && data[i].categoryId === catdata){
+  newdata.push(data[i])
 }
 }
+else if(isChecked===true){
+  if(data[i].inStock===true && data[i].categoryId === catdata){
+    newdata.push(data[i])
+  }
+}
+else if(isChecked2===true){
+  if( data[i].delivery===false && data[i].categoryId === catdata){
+    newdata.push(data[i])
+  }
+}
+else{
+  if(data[i].categoryId === catdata){
+    newdata.push(data[i])
+  }
+}
+
+}
+
+
+
+
+
   return (
     <div className='grid-cat'>
       <div>
         <div className='box'>
-         <input type="checkbox" name="Instock" id="Instock" />
+         <input type="checkbox" name="Instock" id="Instock" checked={isChecked}
+          onChange={(e)=>handleCheckboxChange(e)} />
 <label htmlFor="Instock">In Stock</label> 
         </div>
         <div className='box'>
-         <input type="checkbox" name="delivery" id="delivery" />
+         <input type="checkbox" name="delivery" id="delivery"  checked={isChecked2}
+          onChange={(e)=>handleCheckboxChange2(e)} />
 <label htmlFor="delivery">Free Delivery</label> 
         </div>
 
